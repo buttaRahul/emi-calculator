@@ -7,9 +7,9 @@ const PriceInputContainer = () => {
     console.log('hehe' ,priceMarkings)
   return (
     <Box width={'700px'} display={'flex'} flexDirection={'column'} gap={5}>
-        <PriceInputComponent markings = {priceMarkings}/>
-        <PriceInputComponent markings={tenureMarkings}/>
-        <PriceInputComponent markings={rateMarkings}/>
+        <PriceInputComponent markings = {priceMarkings} title={'House Loan Amount'}/>
+        <PriceInputComponent markings={tenureMarkings} title={'Loan Tenure'}/>
+        <PriceInputComponent markings={rateMarkings} title={'Interest Rate'}/>
 
     </Box>
   )
