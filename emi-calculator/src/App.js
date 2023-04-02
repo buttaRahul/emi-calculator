@@ -1,10 +1,10 @@
+import { Box } from "@mui/material";
+import EmiApp from "./app/EmiApp";
 
 
 function App() {
   return (
-   <div>
-      HELLO WORLD
-   </div>
+  <EmiApp/>
   );
 }
 

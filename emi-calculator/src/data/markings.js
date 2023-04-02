@@ -6,7 +6,7 @@ for ( let i = 0; i < 9 ; i++ ){
     let val = i*25
     priceMarkings.push({
         value: val,
-        label: (val<100) ? `${val}L`:`${val}Cr`
+        label: (val<100) ? `${val}L`:`${val/100}Cr`
     })
 }
 
