@@ -8,8 +8,8 @@ const PriceInputContainer = () => {
   return (
     <Box width={'700px'} display={'flex'} flexDirection={'column'} gap={5}>
         <PriceInputComponent markings = {priceMarkings} title={'House Loan Amount'}/>
-        <PriceInputComponent markings={tenureMarkings} title={'Loan Tenure'}/>
-        <PriceInputComponent markings={rateMarkings} title={'Interest Rate'}/>
+        {/* <PriceInputComponent markings={tenureMarkings} title={'Loan Tenure'}/> */}
+        {/* <PriceInputComponent markings={rateMarkings} title={'Interest Rate'}/> */}
 
     </Box>
   )
