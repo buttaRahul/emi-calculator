@@ -5,7 +5,7 @@ const initialState = {p:0, r: 0,t:0}
 const EmiContextProvider = () => {
   const [values, setValues] = useState(initialState)
   const updateValues = ({name,value}) => {
-        setValues((v)=>{{...v,[name]:value}})
+        setValues((v)=>({...v,[name]:value}))
   }
 }
 
