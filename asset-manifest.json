@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/emi-calculator/static/js/main.dd4f1448.js",
+    "index.html": "/emi-calculator/index.html",
+    "main.dd4f1448.js.map": "/emi-calculator/static/js/main.dd4f1448.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.dd4f1448.js"
+  ]
+}
