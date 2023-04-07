@@ -1,28 +1,26 @@
-import { createContext, useState } from "react"
+import { createContext, useState } from "react";
 
 const initialValues = {
-    ammount:2500000,
-    rate:10,
-    tenure:10,
+  ammount: 0,
+  rate: 0,
+  tenure: 0,
+};
 
+export const EMIContext = createContext();
 
-}
-
-export const EMIContext = createContext()
-
-
-const EMIContextProvider = ({children}) => {
-    const [values,setValues] = useState(initialValues)
-    const updateValues = ({name,value})=>{
-        setValues({
-            ...values,[name]:value
-        })
-    }
+const EMIContextProvider = ({ children }) => {
+  const [values, setValues] = useState(initialValues);
+  const updateValues = (name, value) => {
+    setValues({
+      ...values,
+      [name]: value,
+    });
+  };
   return (
-    <EMIContext.Provider value={{values,updateValues}}>
-        {children}
-    </EMIContext.Provider >
-  )
-}
+    <EMIContext.Provider value={{ values, updateValues }}>
+      {children}
+    </EMIContext.Provider>
+  );
+};
 
-export default EMIContextProvider
+export default EMIContextProvider;

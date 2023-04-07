@@ -3,9 +3,7 @@ import React, { useContext } from "react";
 import PriceViewComponent from "./PriceViewComponent";
 import { EMIContext } from "../data/EMIContextProvider";
 // P x R x (1+R)^N / [(1+R)^N-1]
-// const calculateEmi = ()=>{
 
-// }
 
 function calculateEmi(P, R, N) {
   let emiAmmount = 0;
@@ -20,9 +18,7 @@ function calculateEmi(P, R, N) {
     (P * R * Math.pow(1 + R, N)) /
     (Math.pow(1 + R, N) - 1)
   ).toFixed(0);
-  // console.log(emiAmmount.toFixed(0))
 
-  // calculating total ammount
   totalPayableAmmount = N * emiAmmount;
   totalInterestAmmount = totalPayableAmmount - P;
 
@@ -33,16 +29,12 @@ function calculateEmi(P, R, N) {
   };
 }
 
-// calculateEmi(5000000,10,12)
 
 const ViewContainer = () => {
-  // const context = useContext(EMIContext)
   const { values } = useContext(EMIContext);
   const { ammount, rate, tenure } = values;
-  console.log("CONTEXT: ", values);
   const { emiAmmount, totalInterestAmmount, totalPayableAmmount } =
     calculateEmi(ammount, rate, tenure);
-  // const {emiAmmount,totalInterestAmmount,totalPayableAmmount} = calculateEmi(5000000,10,12)
   return (
     <Box
       display={"flex"}
