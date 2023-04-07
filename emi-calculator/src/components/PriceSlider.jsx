@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 
-import { CustomStyledSlider } from "../styled-components/CustomStyledSlider";
+
 import { EMIContext } from "../data/EMIContextProvider";
+import { CustomStyledSlider } from "../styledComponents/CustomStyledSlider";
 
 const PriceSlider = ({ markings, name, cf }) => {
   const { values, updateValues } = useContext(EMIContext);
