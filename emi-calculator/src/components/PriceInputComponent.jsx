@@ -1,11 +1,12 @@
 import { Box, TextField } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import PriceSlider from './PriceSlider'
 import { CustomTextField } from '../styled-components/CustomTextField'
+import { EMIContext } from '../data/EMIContextProvider'
 
-const PriceInputComponent = ({markings,title,cf = 1,updateValues,name}) => {
+const PriceInputComponent = ({markings,title,cf = 1,name}) => {
   
-  
+  const {updateValues} = useContext(EMIContext)
   const [value,setValue] = useState('0')
   const updateFromSlider = (sv) => {
     setValue(sv*cf)
